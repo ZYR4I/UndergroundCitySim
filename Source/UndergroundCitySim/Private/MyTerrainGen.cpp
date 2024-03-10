@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "MyTerrainGen.h"
 #include "Math/UnrealMathUtility.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
 #include "UObject/ConstructorHelpers.h"
-#include "MyTerrainGen.h"
 
 // Sets default values
 AMyTerrainGen::AMyTerrainGen()

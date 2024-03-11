@@ -12,8 +12,12 @@ AMyTerrainGen::AMyTerrainGen()
 	groundMeshes = CreateDefaultSubobject<UHierarchicalInstancedStaticMeshComponent>
 	(TEXT("groundMeshes"));
 
-	static ConstructorHelpers::FClassFinder<AMyWallCollision>wallCollisionBP(TEXT("/Game/Blueptints/WorldGen/BP_EnhancedWallCollision"));
-	wallCollision = wallCollisionBP.Class;
+	if (this != NULL)
+	{
+		static ConstructorHelpers::FClassFinder<AMyWallCollision>wallCollisionBP(TEXT("/Game/Blueptints/WorldGen/BP_EnhancedWallCollision"));
+		wallCollision = wallCollisionBP.Class;
+	}
+
 	if (wallCollision == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("This shouldnt work"));

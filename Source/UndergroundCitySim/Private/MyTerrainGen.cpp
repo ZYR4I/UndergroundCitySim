@@ -89,6 +89,8 @@ void AMyTerrainGen::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	AMyTerrainGen::clearGrid();
+	AMyTerrainGen::PopulateGrid();
 }
 
 // Called every frame
